@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:id="@+id/btn_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/main_button"
+        android:text="最好成绩"/>
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_history"
+        android:layout_alignLeft="@+id/btn_history"
+        android:layout_marginBottom="20dp"
+        style="@style/main_button"
+        android:text="难度选择"  />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_select"
+        android:layout_alignLeft="@+id/btn_history"
+        android:layout_marginBottom="20dp"
+        style="@style/main_button"
+        android:text="开始游戏"
+       />
+
+    <Button
+        android:id="@+id/btn_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_history"
+        android:layout_alignLeft="@+id/btn_history"
+        android:layout_marginTop="20dp"
+        style="@style/main_button"
+        android:text="帮助说明"
+        />
+
+</RelativeLayout>

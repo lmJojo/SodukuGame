@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">数独游戏</string>
+
+    <string name="showLevel">当前难度为：</string>
+    <string name="simple">简单</string>
+    <string name="common">一般</string>
+    <string name="difficult">困难</string>
+
+    <string name="help_title">游戏说明</string>
+    <string name="help_content">\t\t\t这是一个数独游戏，有9个9宫格，每行每列和每个9宫格都是 1-9这9个数字排列，不能够重复；完成数独全部空格后点击完成即可，如果出现错误会有提示。</string>
+
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_text">#FFFFFF</color>
+
+    <color name="shudu_backgraund">#575353</color>
+    <color name="blue_background">#4FB8E2</color>
+    <color name="text_color">#ffffff</color>
+    <color name="chose_background">#D88B39</color>
+    <color name="error_background">#E93636</color>
+    <color name="boder_line">#FFFFFF</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="main_title">#fff</color>
+
+    <color name="blue"> #4FB8E2</color>
+    <color name="gray">#BBC2C2</color>
+    <color name="black">#161515</color>
+    <color name="orange">#FCDE84</color>
+
+</resources>

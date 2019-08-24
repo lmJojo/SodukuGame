@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shudu_backgraund"
+     tools:context=".activity.GameActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bakcground"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/view_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:text="难度">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:text="    已用时间 "/>
+
+       <Chronometer
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:format="%s"
+          android:id="@+id/time"
+          android:textSize="30sp" />
+    </LinearLayout>
+
+    <com.studyboy.shudu2.view.ShuDuView
+        android:id="@+id/shudu_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+       />
+
+    <!--相关布局， 6 居中，3、6、9 所在的列 居中-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_gravity="center">
+        <!-- 6居中 -->
+        <Button
+            android:id="@+id/btn_num_6"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            style="@style/game_number_btn"
+            android:text="6" />
+
+        <!-- 3 在6 上方 -->
+        <Button
+            android:id="@+id/btn_num_3"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/btn_num_6"
+            android:layout_alignLeft="@+id/btn_num_6"
+            style="@style/game_number_btn"
+            android:text="3" />
+
+        <!-- 9 在6 下方 -->
+        <Button
+            android:id="@+id/btn_num_9"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/btn_num_6"
+            android:layout_alignLeft="@+id/btn_num_6"
+            style="@style/game_number_btn"
+            android:text="9" />
+
+        <!--  2 在 3 左侧 ,顶部对齐 ，1 、 2 、 3 、暂停/继续 同行-->
+        <Button
+            android:id="@+id/btn_num_2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_toLeftOf="@+id/btn_num_3"
+            android:layout_alignTop="@+id/btn_num_3"
+            style="@style/game_number_btn"
+            android:text="2" />
+
+        <!--  1 在 2 左侧 ,顶部对齐  -->
+        <Button
+            android:id="@+id/btn_num_1"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_toLeftOf="@+id/btn_num_2"
+            android:layout_alignTop="@+id/btn_num_3"
+            style="@style/game_number_btn"
+            android:text="1" />
+
+        <!--  暂停/继续 在 3 右侧 ,顶部对齐-->
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@+id/btn_num_3"
+            android:layout_alignTop="@+id/btn_num_3"
+            style="@style/game_number_btn"
+            android:text="  暂停/继续  " />
+
+
+        <!--  5 在 6 左侧 ,顶部对齐 ，4、5、6、 完成  同行-->
+        <Button
+            android:id="@+id/btn_num_5"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_toLeftOf="@+id/btn_num_6"
+            android:layout_alignTop="@+id/btn_num_6"
+            style="@style/game_number_btn"
+            android:text="5" />
+
+        <!--  4 在 5 左侧 ,顶部对齐  -->
+        <Button
+            android:id="@+id/btn_num_4"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_toLeftOf="@+id/btn_num_5"
+            android:layout_alignTop="@+id/btn_num_6"
+            style="@style/game_number_btn"
+            android:text="4" />
+
+        <!--  完成 在 6 右侧 ,顶部对齐-->
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@+id/btn_num_6"
+            android:layout_alignTop="@+id/btn_num_6"
+            style="@style/game_number_btn"
+            android:text="     完成     " />
+
+
+        <!--  8 在 9  左侧 -->
+        <Button
+            android:id="@+id/btn_num_8"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_toLeftOf="@+id/btn_num_9"
+            android:layout_alignTop="@+id/btn_num_9"
+            style="@style/game_number_btn"
+            android:text="8" />
+        <!--  7 在 8 左侧 -->
+        <Button
+            android:id="@+id/btn_num_7"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_toLeftOf="@+id/btn_num_8"
+            android:layout_alignTop="@+id/btn_num_9"
+            style="@style/game_number_btn"
+            android:text="7" />
+
+        <!--  重新开始 在 9 右侧 ,顶部对齐-->
+        <Button
+            android:id="@+id/btn_start_game"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@+id/btn_num_9"
+            android:layout_alignTop="@+id/btn_num_9"
+            style="@style/game_number_btn"
+            android:text="  重新开始  " />
+
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+    </RelativeLayout>
+
+</LinearLayout>

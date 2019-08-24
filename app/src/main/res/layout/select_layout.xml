@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectActivity">
+
+    <!--android:layout_alignLeft="@+id/btn_difficult"-->
+    <TextView
+        android:id="@+id/tv_showlevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_simple"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        style="@style/game_number_btn"
+        android:padding="20dp"
+        android:text="@string/showLevel"
+        android:textSize="35sp"  />
+
+    <Button
+        android:id="@+id/btn_difficult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        style="@style/game_number_btn"
+        android:text="困难"/>
+
+    <Button
+        android:id="@+id/btn_common"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_difficult"
+        android:layout_alignLeft="@+id/btn_difficult"
+        style="@style/game_number_btn"
+        android:text="一般"/>
+
+    <Button
+        android:id="@+id/btn_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_common"
+        android:layout_alignLeft="@+id/btn_common"
+        android:layout_marginBottom="40dp"
+        android:text="简单"
+        style="@style/game_number_btn"/>
+
+</RelativeLayout>

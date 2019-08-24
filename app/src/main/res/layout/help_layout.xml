@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HelpActivity">
+
+    <TextView
+        android:id="@+id/tv_help_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/help_title"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="27dp"
+        android:textSize="35sp"
+        android:textColor="#0D0E0D"/>
+    <TextView
+        android:id="@+id/tv_help_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_content"
+        android:textSize="27sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#262B26"/>
+
+</LinearLayout>
