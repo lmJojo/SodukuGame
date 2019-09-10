@@ -1,4 +1,4 @@
-package com.studyboy.shudu2.gamebase;
+package com.studyboy.sudoku.gamebase;
 
 /**
  *  10 个数独产生的模板，将1-9 替换a-i 后产生数组

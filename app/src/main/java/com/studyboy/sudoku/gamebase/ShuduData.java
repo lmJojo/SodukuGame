@@ -1,4 +1,4 @@
-package com.studyboy.shudu2.gamebase;
+package com.studyboy.sudoku.gamebase;
 
 import java.util.Random;
 /**

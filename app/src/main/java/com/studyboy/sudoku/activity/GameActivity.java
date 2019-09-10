@@ -1,4 +1,4 @@
-package com.studyboy.shudu2.activity;
+package com.studyboy.sudoku.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,10 +20,10 @@ import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.studyboy.shudu2.listdata.MyDatabaseHelper;
+import com.studyboy.sudoku.listdata.MyDatabaseHelper;
 import com.studyboy.shudu2.R;
-import com.studyboy.shudu2.gamebase.ShuduData;
-import com.studyboy.shudu2.view.ShuDuView;
+import com.studyboy.sudoku.gamebase.ShuduData;
+import com.studyboy.sudoku.view.ShuDuView;
 
 import java.util.Random;
 
@@ -466,12 +466,6 @@ public class GameActivity extends AppCompatActivity {
             if (System.currentTimeMillis() - time > 2000) {
 
                 mToast = Toast.makeText(GameActivity.this,"再按一次退出游戏",Toast.LENGTH_SHORT);
-//                mToast.setText("再按一次退出游戏");
-//                // 设置弹出显示的时间
-//                mToast.setDuration(Toast.LENGTH_SHORT);
-                // 设定显示的位置
-//                mToast.setGravity(17, 0, -30);
-                // 最后一步，show出来
                 mToast.show();
 
                 time = System.currentTimeMillis();
@@ -488,7 +482,7 @@ public class GameActivity extends AppCompatActivity {
         super.finish();
         if(mToast != null){
             mToast.cancel();
-            Log.d(TAG, "finish: ************************* ");
+            Log.d(TAG, "finish: *************************  ");
         }
     }
 

@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.BestHistoryActivity"
+        <activity android:name="com.studyboy.sudoku.activity.BestHistoryActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".activity.SelectActivity"
+        <activity android:name="com.studyboy.sudoku.activity.SelectActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".activity.HelpActivity"
+        <activity android:name="com.studyboy.sudoku.activity.HelpActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".activity.GameActivity"
+        <activity android:name="com.studyboy.sudoku.activity.GameActivity"
             android:launchMode="singleTask"
             android:screenOrientation="sensorPortrait" />
 
-        <activity android:name=".activity.MainActivity"
+        <activity android:name="com.studyboy.sudoku.activity.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="sensorPortrait" >
             <intent-filter>

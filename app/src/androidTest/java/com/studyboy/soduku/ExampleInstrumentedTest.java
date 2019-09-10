@@ -1,4 +1,4 @@
-package com.studyboy.shudu2;
+package com.studyboy.soduku;
 
 import android.content.Context;
 

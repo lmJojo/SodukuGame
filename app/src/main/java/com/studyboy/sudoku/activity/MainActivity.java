@@ -1,4 +1,4 @@
-package com.studyboy.shudu2.activity;
+package com.studyboy.sudoku.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

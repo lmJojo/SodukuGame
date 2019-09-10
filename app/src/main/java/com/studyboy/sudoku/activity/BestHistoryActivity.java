@@ -1,5 +1,4 @@
-package com.studyboy.shudu2.activity;
-
+package com.studyboy.sudoku.activity;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,10 +14,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.studyboy.shudu2.listdata.MyAdapter;
-import com.studyboy.shudu2.listdata.MyDatabaseHelper;
-import com.studyboy.shudu2.listdata.MyScore;
+
 import com.studyboy.shudu2.R;
+import com.studyboy.sudoku.listdata.MyAdapter;
+import com.studyboy.sudoku.listdata.MyDatabaseHelper;
+import com.studyboy.sudoku.listdata.MyScore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +70,7 @@ public class BestHistoryActivity extends AppCompatActivity {
                     break;
 
                 case R.id.Btn_difficult:
-                    gameLevel = "difiicult";
+                    gameLevel = "difficult";
                     selectLevel( );
                     break;
             }
@@ -99,28 +99,28 @@ public class BestHistoryActivity extends AppCompatActivity {
         SQLiteDatabase db = null;
         Cursor cursor = null;
         try {
-                db = this.openOrCreateDatabase("MyScore.db",MODE_PRIVATE,null);
-                if(db != null){
-                    cursor = db.rawQuery("select time from MyScoreTable where level = '"+ gameLevel +"'" +
-                            " order by time asc limit 10  ",null);
-                    Log.d(TAG, "getDBData: ***************************************** 数据查询");
-                    if (cursor != null) {
-                        Log.d(TAG, "getDBData: ***************************************** 数据查询结果");
-                        if(cursor.moveToFirst()) {
-                            do {
-                                int id = cursor.getInt(cursor.getColumnIndex("time"));
-                                Log.d(TAG, "getDBData: ***************************************** 查询结果"+id);
-                                timeArray[i] = id;
-                                i++;
-                            } while (cursor.moveToNext());
-                        }
-                        // 关闭cursor 和数据库
-                        cursor.close();
-                        cursor = null;
+            db = this.openOrCreateDatabase("MyScore.db",MODE_PRIVATE,null);
+            if(db != null){
+                cursor = db.rawQuery("select time from MyScoreTable where level = '"+ gameLevel +"'" +
+                        " order by time asc limit 10  ",null);
+                Log.d(TAG, "getDBData: ***************************************** 数据查询");
+                if (cursor != null) {
+                    Log.d(TAG, "getDBData: ***************************************** 数据查询结果");
+                    if(cursor.moveToFirst()) {
+                        do {
+                            int id = cursor.getInt(cursor.getColumnIndex("time"));
+                            Log.d(TAG, "getDBData: ***************************************** 查询结果"+id);
+                            timeArray[i] = id;
+                            i++;
+                        } while (cursor.moveToNext());
                     }
-                    db.close();
-                    db = null;
+                    // 关闭cursor 和数据库
+                    cursor.close();
+                    cursor = null;
                 }
+                db.close();
+                db = null;
+            }
 
         } catch (Exception e) {
             e.printStackTrace();

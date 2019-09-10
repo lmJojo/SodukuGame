@@ -1,4 +1,4 @@
-package com.studyboy.shudu2.view;
+package com.studyboy.sudoku.view;
 
 import android.app.Dialog;
 import android.content.Context;

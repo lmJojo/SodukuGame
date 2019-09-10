@@ -1,4 +1,4 @@
-package com.studyboy.shudu2.listdata;
+package com.studyboy.sudoku.listdata;
 
 import android.content.Context;
 import android.view.LayoutInflater;
