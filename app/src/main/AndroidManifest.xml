@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.studyboy.sudoku.activity.BestHistoryActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait" />
         <activity android:name="com.studyboy.sudoku.activity.SelectActivity"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait" />
         <activity android:name="com.studyboy.sudoku.activity.HelpActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorPortrait" />
         <activity android:name="com.studyboy.sudoku.activity.GameActivity"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
             android:screenOrientation="sensorPortrait" />
 
         <activity android:name="com.studyboy.sudoku.activity.MainActivity"
