@@ -56,7 +56,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game_layout);
+        setContentView(R.layout.activity_game);
 
         initView();
         StartGame();
@@ -221,7 +221,7 @@ public class GameActivity extends AppCompatActivity {
            insertGameData();
            finishDialogShow();
         } else {
-            // 没完成，重绘数独界面
+            // 没完成，重绘数独界面,标出错误数字
             shuDuView.postInvalidate();
             unfinishDialogShow();
         }

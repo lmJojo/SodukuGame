@@ -48,41 +48,19 @@
         android:layout_margin="15dp"
        />
 
-    <!--相关布局， 6 居中，3、6、9 所在的列 居中-->
+    <!--1 到 9 数字-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:layout_gravity="center">
-        <!-- 6居中 -->
-        <Button
-            android:id="@+id/btn_num_6"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:layout_centerInParent="true"
-            style="@style/game_number_btn"
-            android:text="6" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp" >
 
-        <!-- 3 在6 上方 -->
         <Button
             android:id="@+id/btn_num_3"
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:layout_above="@+id/btn_num_6"
-            android:layout_alignLeft="@+id/btn_num_6"
+            android:layout_centerInParent="true"
             style="@style/game_number_btn"
             android:text="3" />
-
-        <!-- 9 在6 下方 -->
-        <Button
-            android:id="@+id/btn_num_9"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/btn_num_6"
-            android:layout_alignLeft="@+id/btn_num_6"
-            style="@style/game_number_btn"
-            android:text="9" />
-
-        <!--  2 在 3 左侧 ,顶部对齐 ，1 、 2 、 3 、暂停/继续 同行-->
         <Button
             android:id="@+id/btn_num_2"
             android:layout_width="100dp"
@@ -105,13 +83,27 @@
         <!--  暂停/继续 在 3 右侧 ,顶部对齐-->
         <Button
             android:id="@+id/btn_pause"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/btn_num_3"
             android:layout_alignTop="@+id/btn_num_3"
             style="@style/game_number_btn"
             android:text="  暂停/继续  " />
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 6居中 -->
+        <Button
+            android:id="@+id/btn_num_6"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            style="@style/game_number_btn"
+            android:text="6" />
 
         <!--  5 在 6 左侧 ,顶部对齐 ，4、5、6、 完成  同行-->
         <Button
@@ -132,18 +124,31 @@
             android:layout_alignTop="@+id/btn_num_6"
             style="@style/game_number_btn"
             android:text="4" />
-
         <!--  完成 在 6 右侧 ,顶部对齐-->
         <Button
             android:id="@+id/btn_finish"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/btn_num_6"
             android:layout_alignTop="@+id/btn_num_6"
             style="@style/game_number_btn"
             android:text="     完成     " />
 
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_num_9"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+         android:layout_centerInParent="true"
+            style="@style/game_number_btn"
+            android:text="9" />
+
+        <!--  2 在 3 左侧 ,顶部对齐 ，1 、 2 、 3 、暂停/继续 同行-->
         <!--  8 在 9  左侧 -->
         <Button
             android:id="@+id/btn_num_8"
@@ -166,7 +171,7 @@
         <!--  重新开始 在 9 右侧 ,顶部对齐-->
         <Button
             android:id="@+id/btn_start_game"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/btn_num_9"
             android:layout_alignTop="@+id/btn_num_9"

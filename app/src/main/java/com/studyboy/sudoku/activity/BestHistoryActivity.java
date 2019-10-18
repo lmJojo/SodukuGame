@@ -101,7 +101,7 @@ public class BestHistoryActivity extends AppCompatActivity {
         try {
             db = this.openOrCreateDatabase("MyScore.db",MODE_PRIVATE,null);
             if(db != null){
-                cursor = db.rawQuery("select time from MyScoreTable where level = '"+ gameLevel +"'" +
+                cursor = db.rawQuery("select time from MyScoreTable where level = '"+gameLevel +"'" +
                         " order by time asc limit 10  ",null);
                 Log.d(TAG, "getDBData: ***************************************** 数据查询");
                 if (cursor != null) {

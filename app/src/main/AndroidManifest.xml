@@ -21,6 +21,7 @@
         <activity android:name="com.studyboy.sudoku.activity.GameActivity"
             android:launchMode="singleTop"
             android:screenOrientation="sensorPortrait" />
+        <!-- sensorPortrait  -->
 
         <activity android:name="com.studyboy.sudoku.activity.MainActivity"
             android:launchMode="singleTop"

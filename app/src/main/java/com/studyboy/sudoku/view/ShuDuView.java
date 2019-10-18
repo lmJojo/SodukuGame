@@ -123,7 +123,7 @@ public class ShuDuView extends View {
                     sl = step*x; st=0; sr = step*x; sb = height;
                 }
             }else {
-                paint.setStrokeWidth(1);
+                paint.setStrokeWidth(2);
                 paint.setColor(lineBorder);
                 // 横线起点、终点坐标
                 hl = 0; ht = step*x; hr = width; hb = step*x;
