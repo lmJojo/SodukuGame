@@ -38,38 +38,23 @@ public class MyAdapter extends ArrayAdapter<MyScore> {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent ){
-        MyScore myScore =getItem(position);
 
-        // 使用LayoutInfater为子项加载传入的布局
-        View view= LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+        View view;
+        if(convertView == null){
+            // 使用LayoutInfater为子项加载传入的布局
+            view= LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+        } else {
+            view = convertView;
+        }
+
         TextView list_Rank=(TextView) view.findViewById(R.id.list_rank);
         TextView list_Time=(TextView)  view.findViewById(R.id.list_time);
-        list_Rank.setText(myScore.getRank()+" ");
-        setTimeText(list_Time,myScore.getTime());
-//        list_Time.setText(myScore.getTime()/60+"分 "+myScore.getTime()%60+"秒");
-        return view;
-    }
 
-    /**
-     * 时间记录显示设置
-     * @param textView
-     * @param time
-     */
-    public void setTimeText(TextView textView,int time){
-         int hh = time/3600;
-         int mm = time %3600 /60;
-         int ss = time %60;
-         String str = null;
-         if(hh > 0){
-             str = String.format("%d小时 %d分 %d秒",hh,mm,ss);
-         }
-         else if(mm > 0){
-             str = String.format(" %d分 %d秒",mm,ss);
-         }
-         else{
-             str = String.format(" %d秒",ss);
-         }
-        textView.setText(str);
+        int myTime = getItem(position).getTime();
+        list_Time.setText( Util.ScoreFormat( myTime));
+        list_Rank.setText( ""+ (position+1) );
+
+        return view;
     }
 
 }

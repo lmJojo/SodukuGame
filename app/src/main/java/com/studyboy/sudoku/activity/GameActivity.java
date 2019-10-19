@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.studyboy.sudoku.listdata.MyDatabaseHelper;
 import com.studyboy.shudu2.R;
 import com.studyboy.sudoku.gamebase.ShuduData;
+import com.studyboy.sudoku.listdata.MyScore;
 import com.studyboy.sudoku.view.ShuDuView;
 
 import java.util.Random;
@@ -69,7 +70,6 @@ public class GameActivity extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("data",MODE_PRIVATE);
         showNum = sp.getInt("showNum",5);
         gameDifficulty = sp.getString("difficulty","common");
-//        setLevel(showNum);
 
         text = (TextView) findViewById(R.id.view_difficulty);
         text.setText("目前难度:"+ gameDifficulty +"   ");
@@ -79,6 +79,12 @@ public class GameActivity extends AppCompatActivity {
 
         chronometer = (Chronometer) findViewById(R.id.time);
         chronometer.setFormat("%s");
+
+        initButton();
+
+    }
+
+    public void initButton(){
 
         View view = findViewById(R.id.btn_start_game);
         if (view != null) {
@@ -116,7 +122,6 @@ public class GameActivity extends AppCompatActivity {
         btn_num_09.setOnClickListener(myOnclick);
 
         buttonColor = getResources().getColor(R.color.blue);
-
     }
 
     public View.OnClickListener myOnclick = new View.OnClickListener() {
@@ -185,6 +190,7 @@ public class GameActivity extends AppCompatActivity {
      public void  restartGame(){
         shuDuView.clear();
          StartGame();
+         Log.d(TAG, "restartGame: ***** showNum="+showNum);
          getNumberArray(showNum);
      }
     /**
@@ -253,55 +259,11 @@ public class GameActivity extends AppCompatActivity {
      */
     public void insertGameData( ){
 
-        MyDatabaseHelper dbHelper = new MyDatabaseHelper(this,"MyScore.db",null,1);
-
-        SQLiteDatabase db = null;
-        ContentValues values = null;
-
-        try{
-             db = dbHelper.getWritableDatabase();
-             if(db != null) {
-                 values = new ContentValues();
-                 values.put("level", gameDifficulty);
-                 values.put("time", gameTime);
-                 db.insert("MyScoreTable", null, values);
-
-                 db.close();
-                 db = null;
-                 values = null;
-             }
-        } catch (Exception e){
-            e.printStackTrace();
-        } finally {
-            try{
-                if(db != null){
-                    db.close();
-                }
-                if(values != null){
-                    values = null;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            db = null;
-        }
-
-    }
-   /**
-   *  设定显示的游戏难度
-   */
-    public void setLevel(int  difficulty){
-        switch (difficulty){
-            case 6:
-                gameDifficulty = "simple";
-                break;
-            case 5:
-                gameDifficulty = "common";
-                break;
-            case 4:
-                gameDifficulty = "difiicult";
-                break ;
-        }
+        Log.d(TAG, "onCreate: ************************ showNum="+showNum);
+        MyScore myScore = new MyScore();
+        myScore.setTime( gameTime );
+        myScore.setLevel( showNum ); // 每列显示的个数对应难度
+        myScore.save();
     }
 
     /**
@@ -485,6 +447,5 @@ public class GameActivity extends AppCompatActivity {
             Log.d(TAG, "finish: *************************  ");
         }
     }
-
 
 }

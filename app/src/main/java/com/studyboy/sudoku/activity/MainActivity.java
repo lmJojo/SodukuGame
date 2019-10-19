@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.studyboy.shudu2.R;
+import com.studyboy.sudoku.listdata.MyScore;
+
+import org.litepal.LitePal;
 
 public class MainActivity extends AppCompatActivity implements  View.OnClickListener{
 
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        LitePal.getDatabase();
 
         btn_Start  = (Button) findViewById(R.id.btn_start);
         btn_Select = (Button) findViewById(R.id.btn_select);

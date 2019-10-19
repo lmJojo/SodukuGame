@@ -1,22 +1,32 @@
 package com.studyboy.sudoku.listdata;
 
-public class MyScore {
+import org.litepal.crud.LitePalSupport;
 
-    public MyScore(int rank,int time  ){
-        this.rank = rank;
-        this.time = time;
+
+public class MyScore extends LitePalSupport {
+
+    public MyScore(){
+
     }
     private int time;
-    private int rank;
+    private int level;
+    // 用于删除数据时，避免相同数据一起删除
+    private int id;
 
-    public int getRank() {
-
-        return rank;
-    }
 
     public int getTime() {
-
         return time;
+    }
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
     }
 
 }

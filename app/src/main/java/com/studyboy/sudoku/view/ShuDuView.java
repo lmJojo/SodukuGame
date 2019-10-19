@@ -2,6 +2,7 @@ package com.studyboy.sudoku.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
@@ -167,6 +168,7 @@ public class ShuDuView extends View {
                     paint.setColor(choseBackground);      // 橙色
                     drawIndex(i,j,canvas,paint);
                     click[i][j] = 0;
+                    drawRec(i,j,canvas,paint);
                 }
 
                 // 显示初始已有的提示数字
@@ -199,6 +201,27 @@ public class ShuDuView extends View {
         canvas.drawRect(rectF,paint);
     }
 
+    /**
+     *  画当前点击项行、列边框
+     */
+    private void drawRec(int x,int y,Canvas canvas,Paint paint){
+        paint.setStrokeWidth(3);
+
+        paint.setColor(Color.YELLOW);
+        paint.setStyle(Paint.Style.STROKE);
+        // 行边框
+
+        RectF rectF = new RectF(0,y*step ,width ,(y+1)*step );
+        canvas.drawRect(rectF,paint);
+        // 列边框
+        rectF = null;
+        rectF = new RectF(x*step,0 ,(x+1)*step ,height);
+        canvas.drawRect(rectF,paint);
+
+        paint.setStyle(Paint.Style.FILL);
+        paint.setStrokeWidth(1);
+
+    }
     /**
      *  传入初始数组
      */
