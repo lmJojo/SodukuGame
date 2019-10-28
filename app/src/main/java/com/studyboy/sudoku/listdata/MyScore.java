@@ -10,8 +10,8 @@ public class MyScore extends LitePalSupport {
     }
     private int time;
     private int level;
-    // 用于删除数据时，避免相同数据一起删除
-    private int id;
+//    // 用于删除数据时，避免相同数据一起删除
+//    private int id;
 
 
     public int getTime() {

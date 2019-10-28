@@ -9,18 +9,33 @@ android {
         applicationId "com.studyboy.SudokuGame"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 190815001
-        versionName "2.0"
+        versionCode 191023001
+        versionName "2.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        config {
+            keyAlias 'rbsoft'
+            keyPassword '23378528'
+            storeFile file('E:/androidReadboy_sign/g_key/readboy.key')
+            storePassword 'soft@readboy.com'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
+            //false 则不混淆
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // 应用签名
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // 应用签名
+            signingConfig signingConfigs.config
         }
     }
 }

@@ -7,6 +7,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
  <!--主界面 button 样式-->
     <style name="main_button">
         <item name="android:textSize"> 30sp</item>

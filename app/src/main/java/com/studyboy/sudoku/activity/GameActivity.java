@@ -3,11 +3,11 @@ package com.studyboy.sudoku.activity;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
@@ -20,7 +20,7 @@ import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.studyboy.sudoku.listdata.MyDatabaseHelper;
+
 import com.studyboy.shudu2.R;
 import com.studyboy.sudoku.gamebase.ShuduData;
 import com.studyboy.sudoku.listdata.MyScore;
@@ -429,7 +429,6 @@ public class GameActivity extends AppCompatActivity {
 
                 mToast = Toast.makeText(GameActivity.this,"再按一次退出游戏",Toast.LENGTH_SHORT);
                 mToast.show();
-
                 time = System.currentTimeMillis();
             } else {
                 finish();
